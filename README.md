@@ -22,17 +22,18 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Awesome Book<a name="about-project"></a>
+# 📖 To Do List <a name="about-project"></a>
 <table>
-  <td style="border: 1px solid black;"><img src="/images/ss1.png" alt="Awesomebook" /></td>
+  <td style="border: 1px solid black;"><img src="./src/ss.png" alt="To Do List" /></td>
   </table>
 
-**Awesome books** An application for adding and removing books that highlights the use of ES6. 
+**To Do List** An application for adding and removing books that highlights the use of ES6. 
 
 ## 🛠 Built With <a name="built-with"></a>
     HTML
     CSS
     Javascript
+    Webpack
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -41,7 +42,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Awesome Book]()
+[To Do List](coming soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,7 +55,7 @@
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone https://github.com/LoviMadaan/T0-do-list.git
+- On the terminal run this command git clone https://github.com/LoviMadaan/To-do-list.git
 
 - Go to the repository folder using command prompt cd.
 
@@ -66,7 +67,7 @@
 
 > Clone this repository to your desired folder:
 
-- git clone https://github.com/LoviMadaan/T0-do-list.git
+- git clone https://github.com/LoviMadaan/To-do-list.git
 
 <!-- AUTHORS -->
 
@@ -98,11 +99,19 @@ If you like this project you can clone it and use it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **Add Todo**
+- [ ] **Remove Todo**
+- [ ] **Mark Todo as complete**
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank my friends Yidne.
 
@@ -113,7 +122,5 @@ I would like to thank my friends Yidne.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
