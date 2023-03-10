@@ -9,7 +9,7 @@
     "css-linter": "npx stylelint \"**/*.{css,scss}\" --fix",
     "start": "webpack serve --open",
     "build": "webpack",
-    "predeploy": "npm run build"    
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -521,5 +521,8 @@
     "yaml": "^1.10.2",
     "yargs-parser": "^20.2.9",
     "zwitch": "^1.0.5"
+  },
+  "directories": {
+    "test": "test"
   }
 }

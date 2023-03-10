@@ -1,23 +1,23 @@
 // SELECT ELEMENTS
-const form = document.getElementById('todoform');
-const todoInput = document.getElementById('newtodo');
-const todosListEl = document.getElementById('todos-list');
-const notificationEl = document.querySelector('.notification');
+const form = document.getElementById("todoform");
+const todoInput = document.getElementById("newtodo");
+const todosListEl = document.getElementById("todos-list");
+const notificationEl = document.querySelector(".notification");
 
 // VARS
-let todos = JSON.parse(localStorage.getItem('todos')) || [];
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
 let EditTodoId = -1;
 
 // 1st render
 renderTodos();
 
 // FORM SUBMIT
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   saveTodo();
   renderTodos();
-  localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem("todos", JSON.stringify(todos));
 });
 
 // SAVE TODO
@@ -25,7 +25,7 @@ function saveTodo() {
   const todoValue = todoInput.value;
 
   // check if the todo is empty
-  const isEmpty = todoValue === '';
+  const isEmpty = todoValue === "";
 
   // check for duplicate todos
   const isDuplicate = todos.some((todo) => todo.value.toUpperCase() === todoValue.toUpperCase());
@@ -33,7 +33,7 @@ function saveTodo() {
   if (isEmpty) {
     showNotification("Todo's input is empty");
   } else if (isDuplicate) {
-    showNotification('Todo already exists!');
+    showNotification("Todo already exists!");
   } else {
     if (EditTodoId >= 0) {
       todos = todos.map((todo, index) => ({
@@ -45,34 +45,34 @@ function saveTodo() {
       todos.push({
         value: todoValue,
         checked: false,
-        color: '#' + Math.floor(Math.random() * 16777215).toString(16),
+        color: "#" + Math.floor(Math.random() * 16777215).toString(16),
       });
     }
 
-    todoInput.value = '';
+    todoInput.value = "";
   }
 }
 
 // RENDER TODOS
 function renderTodos() {
   if (todos.length === 0) {
-    todosListEl.innerHTML = '<center>Nothing to do!</center>';
+    todosListEl.innerHTML = "<center>Nothing to do!</center>";
     return;
   }
 
   // CLEAR ELEMENT BEFORE A RE-RENDER
-  todosListEl.innerHTML = '';
+  todosListEl.innerHTML = "";
 
   // RENDER TODOS
   todos.forEach((todo, index) => {
     todosListEl.innerHTML += `
     <div class="todo" id=${index}>
       <i 
-        class="bi ${todo.checked ? 'bi-check-circle-fill' : 'bi-circle'}"
+        class="bi ${todo.checked ? "bi-check-circle-fill" : "bi-circle"}"
         style="color : ${todo.color}"
         data-action="check"
       ></i>
-      <p class="${todo.checked ? 'checked' : ''}" data-action="check">${todo.value}</p>
+      <p class="${todo.checked ? "checked" : ""}" data-action="check">${todo.value}</p>
       <i class="bi bi-pencil-square" data-action="edit"></i>
       <i class="bi bi-trash" data-action="delete"></i>
     </div>
@@ -81,11 +81,11 @@ function renderTodos() {
 }
 
 // CLICK EVENT LISTENER FOR ALL THE TODOS
-todosListEl.addEventListener('click', (event) => {
+todosListEl.addEventListener("click", (event) => {
   const target = event.target;
   const parentElement = target.parentNode;
 
-  if (parentElement.className !== 'todo') return;
+  if (parentElement.className !== "todo") return;
 
   // t o d o id
   const todo = parentElement;
@@ -94,9 +94,9 @@ todosListEl.addEventListener('click', (event) => {
   // target action
   const action = target.dataset.action;
 
-  action === 'check' && checkTodo(todoId);
-  action === 'edit' && editTodo(todoId);
-  action === 'delete' && deleteTodo(todoId);
+  action === "check" && checkTodo(todoId);
+  action === "edit" && editTodo(todoId);
+  action === "delete" && deleteTodo(todoId);
 });
 
 // CHECK A TODO
@@ -107,7 +107,7 @@ function checkTodo(todoId) {
   }));
 
   renderTodos();
-  localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 // EDIT A TODO
@@ -123,7 +123,7 @@ function deleteTodo(todoId) {
 
   // re-render
   renderTodos();
-  localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 // SHOW A NOTIFICATION
@@ -132,10 +132,10 @@ function showNotification(msg) {
   notificationEl.innerHTML = msg;
 
   // notification enter
-  notificationEl.classList.add('notif-enter');
+  notificationEl.classList.add("notif-enter");
 
   // notification leave
   setTimeout(() => {
-    notificationEl.classList.remove('notif-enter');
+    notificationEl.classList.remove("notif-enter");
   }, 2000);
 }

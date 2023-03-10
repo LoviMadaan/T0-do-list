@@ -24,7 +24,7 @@
 
 # 📖 To Do List <a name="about-project"></a>
 <table>
-  <td style="border: 1px solid black;"><img src="./src/ss.png" alt="To Do List" /></td>
+  <td style="border: 1px solid black;"><img src="./ss.png" alt="To Do List" /></td>
   </table>
 
 **To Do List** An application for adding and removing books that highlights the use of ES6. 

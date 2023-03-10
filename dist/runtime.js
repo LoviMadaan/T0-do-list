@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
@@ -61,7 +62,7 @@
 /******/ 					}
 /******/ 				}
 /******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
+/******/ 					deferred.splice(i--, 1);
 /******/ 					var r = fn();
 /******/ 					if (r !== undefined) result = r;
 /******/ 				}
@@ -72,7 +73,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -121,7 +122,7 @@
 /******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
-/******/ 		}
+/******/ 		};
 /******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunkto_do_list"] = self["webpackChunkto_do_list"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
