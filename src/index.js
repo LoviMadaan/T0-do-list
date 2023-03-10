@@ -1,4 +1,4 @@
-import "./index.css";
+// import "./index.css";
 // SELECT ELEMENTS
 const form = document.getElementById("todoform");
 const todoInput = document.getElementById("newtodo");
@@ -66,7 +66,7 @@ function renderTodos() {
 
   // RENDER TODOS
   todos.forEach((todo, index) => {
-    todosListEl.innerHTML += `
+    todosListEl.innerHTML +=`
     <div class="todo" id=${index}>
       <i 
         class="bi ${todo.checked ? "bi-check-circle-fill" : "bi-circle"}"
