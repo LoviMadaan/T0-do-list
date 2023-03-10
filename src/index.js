@@ -1,3 +1,4 @@
+import "./index.css";
 // SELECT ELEMENTS
 const form = document.getElementById("todoform");
 const todoInput = document.getElementById("newtodo");
