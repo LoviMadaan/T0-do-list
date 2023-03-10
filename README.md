@@ -55,7 +55,7 @@
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone https://github.com/LoviMadaan/To-do-list.git
+- On the terminal run this command git clone https://github.com/LoviMadaan/T0-do-list.git
 
 - Go to the repository folder using command prompt cd.
 
